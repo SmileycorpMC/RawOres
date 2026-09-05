@@ -26,7 +26,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'java'
 
-version = "1.12.2-1.0.5"
+version = "1.12.2-1.0.5a"
 group = "net.smileycorp.dynaores"
 archivesBaseName = "Dynamic-Raw-Ores"
 
@@ -76,7 +76,7 @@ configurations {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
-	implementation "org.spongepowered:mixin:0.8"
+	//implementation "org.spongepowered:mixin:0.8"
 	implementation "curse.maven:jei-238222:4393461"
     implementation "curse.maven:crafttweaker-239197:5486112"
     implementation "curse.maven:mekanism-268560:2835175"
@@ -95,9 +95,6 @@ jar {
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
 			"ForceLoadAsMod": true,
 			"FMLAT": "dynaores_at.cfg",
-			"FMLCorePluginContainsFMLMod": true,
-			"TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
-			"MixinConfigs": "mixins.dynaores.json"
         ])
         
     }
